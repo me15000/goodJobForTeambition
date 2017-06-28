@@ -192,7 +192,7 @@ namespace goodJob
             listView.Columns.Add(new ColumnHeader { Text = "是否完成", Width = 100 });
             listView.Columns.Add(new ColumnHeader { Text = "执行者", Width = 200 });
             listView.Columns.Add(new ColumnHeader { Text = "创建者", Width = 200 });
-            
+
             listView.Columns.Add(new ColumnHeader { Text = "创建时间", Width = 200 });
             listView.Columns.Add(new ColumnHeader { Text = "完成时间", Width = 200 });
             listView.Columns.Add(new ColumnHeader { Text = "标签", Width = 100 });
@@ -224,12 +224,12 @@ namespace goodJob
 
             foreach (var item in q.ToList())
             {
-                var group = new ListViewGroup(item.Name);
+                var group = new ListViewGroup();
                 //group.Header = item.Name;
                 listView.Groups.Add(group);
 
 
-
+                int taskCount = 0;
 
                 var list = datalist.OrderBy(o => o.Completed).ToList().FindAll(o => o.Creator == item.Name);
                 for (int i = 0; i < list.Count; i++)
@@ -264,6 +264,8 @@ namespace goodJob
                             //group.Items.Add(li);
 
                             listView.Items.Add(li);
+
+                            taskCount++;
                         }
 
                         continue;
@@ -295,6 +297,8 @@ namespace goodJob
                             //group.Items.Add(li);
 
                             listView.Items.Add(li);
+
+                            taskCount++;
                         }
 
                         continue;
@@ -330,6 +334,8 @@ namespace goodJob
                             //group.Items.Add(li);
 
                             listView.Items.Add(li);
+
+                            taskCount++;
                         }
                     }
 
@@ -338,6 +344,8 @@ namespace goodJob
 
                 }
 
+
+                group.Header = item.Name + " , Count : " + taskCount + "";
 
             }
 
@@ -398,14 +406,20 @@ namespace goodJob
 
             foreach (var item in q.ToList())
             {
-                var group = new ListViewGroup(item.Name);
-                //group.Header = item.Name;
-                listView.Groups.Add(group);
+
+
 
 
 
 
                 var list = datalist.OrderBy(o => o.Completed).ToList().FindAll(o => o.Executor == item.Name);
+
+                var group = new ListViewGroup();
+
+                listView.Groups.Add(group);
+
+                int taskCount = 0;
+
                 for (int i = 0; i < list.Count; i++)
                 {
                     var ent = list[i];
@@ -438,6 +452,8 @@ namespace goodJob
                             //group.Items.Add(li);
 
                             listView.Items.Add(li);
+
+                            taskCount++;
                         }
 
                         continue;
@@ -469,6 +485,7 @@ namespace goodJob
                             //group.Items.Add(li);
 
                             listView.Items.Add(li);
+                            taskCount++;
                         }
 
                         continue;
@@ -504,6 +521,7 @@ namespace goodJob
                             //group.Items.Add(li);
 
                             listView.Items.Add(li);
+                            taskCount++;
                         }
                     }
 
@@ -512,7 +530,7 @@ namespace goodJob
 
                 }
 
-
+                group.Header = item.Name + " , Count : " + taskCount + "";
             }
 
 
