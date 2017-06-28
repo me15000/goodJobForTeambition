@@ -8,3 +8,13 @@ D:\Projects\goodJob\goodJob\obj\Debug\goodJob.exe
 D:\Projects\goodJob\goodJob\obj\Debug\goodJob.pdb
 D:\Projects\goodJob\goodJob\bin\Debug\CsvHelper.dll
 D:\Projects\goodJob\goodJob\bin\Debug\CsvHelper.xml
+D:\projects\goodJobForTeambition\goodJob\goodJob\bin\Debug\goodJob.exe.config
+D:\projects\goodJobForTeambition\goodJob\goodJob\bin\Debug\goodJob.exe
+D:\projects\goodJobForTeambition\goodJob\goodJob\bin\Debug\goodJob.pdb
+D:\projects\goodJobForTeambition\goodJob\goodJob\bin\Debug\CsvHelper.dll
+D:\projects\goodJobForTeambition\goodJob\goodJob\bin\Debug\CsvHelper.xml
+D:\projects\goodJobForTeambition\goodJob\goodJob\obj\Debug\goodJob.FormMain.resources
+D:\projects\goodJobForTeambition\goodJob\goodJob\obj\Debug\goodJob.Properties.Resources.resources
+D:\projects\goodJobForTeambition\goodJob\goodJob\obj\Debug\goodJob.csproj.GenerateResource.Cache
+D:\projects\goodJobForTeambition\goodJob\goodJob\obj\Debug\goodJob.exe
+D:\projects\goodJobForTeambition\goodJob\goodJob\obj\Debug\goodJob.pdb

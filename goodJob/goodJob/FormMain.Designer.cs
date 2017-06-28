@@ -41,8 +41,9 @@
             this.buttonClear = new System.Windows.Forms.Button();
             this.radioButtonComp = new System.Windows.Forms.RadioButton();
             this.groupBoxComp = new System.Windows.Forms.GroupBox();
-            this.radioButtonNotComp = new System.Windows.Forms.RadioButton();
             this.radioButtonCompAll = new System.Windows.Forms.RadioButton();
+            this.radioButtonNotComp = new System.Windows.Forms.RadioButton();
+            this.checkBoxType = new System.Windows.Forms.CheckBox();
             this.dropPanel.SuspendLayout();
             this.groupBoxComp.SuspendLayout();
             this.SuspendLayout();
@@ -178,21 +179,10 @@
             this.groupBoxComp.Controls.Add(this.radioButtonComp);
             this.groupBoxComp.Location = new System.Drawing.Point(835, 101);
             this.groupBoxComp.Name = "groupBoxComp";
-            this.groupBoxComp.Size = new System.Drawing.Size(250, 35);
+            this.groupBoxComp.Size = new System.Drawing.Size(195, 35);
             this.groupBoxComp.TabIndex = 14;
             this.groupBoxComp.TabStop = false;
             this.groupBoxComp.Text = "完成";
-            // 
-            // radioButtonNotComp
-            // 
-            this.radioButtonNotComp.AutoSize = true;
-            this.radioButtonNotComp.Location = new System.Drawing.Point(71, 13);
-            this.radioButtonNotComp.Name = "radioButtonNotComp";
-            this.radioButtonNotComp.Size = new System.Drawing.Size(59, 16);
-            this.radioButtonNotComp.TabIndex = 14;
-            this.radioButtonNotComp.Text = "未完成";
-            this.radioButtonNotComp.UseVisualStyleBackColor = true;
-            this.radioButtonNotComp.CheckedChanged += new System.EventHandler(this.radioButtonNotComp_CheckedChanged);
             // 
             // radioButtonCompAll
             // 
@@ -207,12 +197,35 @@
             this.radioButtonCompAll.UseVisualStyleBackColor = true;
             this.radioButtonCompAll.CheckedChanged += new System.EventHandler(this.radioButtonCompAll_CheckedChanged);
             // 
+            // radioButtonNotComp
+            // 
+            this.radioButtonNotComp.AutoSize = true;
+            this.radioButtonNotComp.Location = new System.Drawing.Point(71, 13);
+            this.radioButtonNotComp.Name = "radioButtonNotComp";
+            this.radioButtonNotComp.Size = new System.Drawing.Size(59, 16);
+            this.radioButtonNotComp.TabIndex = 14;
+            this.radioButtonNotComp.Text = "未完成";
+            this.radioButtonNotComp.UseVisualStyleBackColor = true;
+            this.radioButtonNotComp.CheckedChanged += new System.EventHandler(this.radioButtonNotComp_CheckedChanged);
+            // 
+            // checkBoxType
+            // 
+            this.checkBoxType.AutoSize = true;
+            this.checkBoxType.Location = new System.Drawing.Point(1036, 115);
+            this.checkBoxType.Name = "checkBoxType";
+            this.checkBoxType.Size = new System.Drawing.Size(132, 16);
+            this.checkBoxType.TabIndex = 15;
+            this.checkBoxType.Text = "根据任务创建者分析";
+            this.checkBoxType.UseVisualStyleBackColor = true;
+            this.checkBoxType.CheckedChanged += new System.EventHandler(this.checkBoxType_CheckedChanged);
+            // 
             // FormMain
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 602);
+            this.Controls.Add(this.checkBoxType);
             this.Controls.Add(this.groupBoxComp);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonCurr);
@@ -253,6 +266,7 @@
         private System.Windows.Forms.GroupBox groupBoxComp;
         private System.Windows.Forms.RadioButton radioButtonCompAll;
         private System.Windows.Forms.RadioButton radioButtonNotComp;
+        private System.Windows.Forms.CheckBox checkBoxType;
     }
 }
 
