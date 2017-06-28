@@ -1,0 +1,10 @@
+D:\Projects\goodJob\goodJob\bin\Debug\goodJob.exe.config
+D:\Projects\goodJob\goodJob\bin\Debug\goodJob.exe
+D:\Projects\goodJob\goodJob\bin\Debug\goodJob.pdb
+D:\Projects\goodJob\goodJob\obj\Debug\goodJob.FormMain.resources
+D:\Projects\goodJob\goodJob\obj\Debug\goodJob.Properties.Resources.resources
+D:\Projects\goodJob\goodJob\obj\Debug\goodJob.csproj.GenerateResource.Cache
+D:\Projects\goodJob\goodJob\obj\Debug\goodJob.exe
+D:\Projects\goodJob\goodJob\obj\Debug\goodJob.pdb
+D:\Projects\goodJob\goodJob\bin\Debug\CsvHelper.dll
+D:\Projects\goodJob\goodJob\bin\Debug\CsvHelper.xml
