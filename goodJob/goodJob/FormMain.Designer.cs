@@ -43,9 +43,12 @@
             this.groupBoxComp = new System.Windows.Forms.GroupBox();
             this.radioButtonCompAll = new System.Windows.Forms.RadioButton();
             this.radioButtonNotComp = new System.Windows.Forms.RadioButton();
-            this.checkBoxType = new System.Windows.Forms.CheckBox();
+            this.groupBoxUser = new System.Windows.Forms.GroupBox();
+            this.radioButtonCreator = new System.Windows.Forms.RadioButton();
+            this.radioButtonExecutor = new System.Windows.Forms.RadioButton();
             this.dropPanel.SuspendLayout();
             this.groupBoxComp.SuspendLayout();
+            this.groupBoxUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // dropPanel
@@ -123,10 +126,10 @@
             this.listView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView.Location = new System.Drawing.Point(12, 142);
+            this.listView.Location = new System.Drawing.Point(12, 183);
             this.listView.Name = "listView";
             this.listView.ShowItemToolTips = true;
-            this.listView.Size = new System.Drawing.Size(1160, 449);
+            this.listView.Size = new System.Drawing.Size(1160, 408);
             this.listView.TabIndex = 7;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.List;
@@ -177,12 +180,12 @@
             this.groupBoxComp.Controls.Add(this.radioButtonCompAll);
             this.groupBoxComp.Controls.Add(this.radioButtonNotComp);
             this.groupBoxComp.Controls.Add(this.radioButtonComp);
-            this.groupBoxComp.Location = new System.Drawing.Point(835, 101);
+            this.groupBoxComp.Location = new System.Drawing.Point(12, 142);
             this.groupBoxComp.Name = "groupBoxComp";
             this.groupBoxComp.Size = new System.Drawing.Size(195, 35);
             this.groupBoxComp.TabIndex = 14;
             this.groupBoxComp.TabStop = false;
-            this.groupBoxComp.Text = "完成";
+            this.groupBoxComp.Text = "根据完成情况查询";
             // 
             // radioButtonCompAll
             // 
@@ -208,16 +211,40 @@
             this.radioButtonNotComp.UseVisualStyleBackColor = true;
             this.radioButtonNotComp.CheckedChanged += new System.EventHandler(this.radioButtonNotComp_CheckedChanged);
             // 
-            // checkBoxType
+            // groupBoxUser
             // 
-            this.checkBoxType.AutoSize = true;
-            this.checkBoxType.Location = new System.Drawing.Point(1036, 115);
-            this.checkBoxType.Name = "checkBoxType";
-            this.checkBoxType.Size = new System.Drawing.Size(132, 16);
-            this.checkBoxType.TabIndex = 15;
-            this.checkBoxType.Text = "根据任务创建者分析";
-            this.checkBoxType.UseVisualStyleBackColor = true;
-            this.checkBoxType.CheckedChanged += new System.EventHandler(this.checkBoxType_CheckedChanged);
+            this.groupBoxUser.Controls.Add(this.radioButtonExecutor);
+            this.groupBoxUser.Controls.Add(this.radioButtonCreator);
+            this.groupBoxUser.Location = new System.Drawing.Point(218, 142);
+            this.groupBoxUser.Name = "groupBoxUser";
+            this.groupBoxUser.Size = new System.Drawing.Size(200, 35);
+            this.groupBoxUser.TabIndex = 16;
+            this.groupBoxUser.TabStop = false;
+            this.groupBoxUser.Text = "根据角色进行分析";
+            // 
+            // radioButtonCreator
+            // 
+            this.radioButtonCreator.AutoSize = true;
+            this.radioButtonCreator.Location = new System.Drawing.Point(6, 13);
+            this.radioButtonCreator.Name = "radioButtonCreator";
+            this.radioButtonCreator.Size = new System.Drawing.Size(83, 16);
+            this.radioButtonCreator.TabIndex = 16;
+            this.radioButtonCreator.Text = "任务创建者";
+            this.radioButtonCreator.UseVisualStyleBackColor = true;
+            this.radioButtonCreator.CheckedChanged += new System.EventHandler(this.radioButtonCreator_CheckedChanged);
+            // 
+            // radioButtonExecutor
+            // 
+            this.radioButtonExecutor.AutoSize = true;
+            this.radioButtonExecutor.Checked = true;
+            this.radioButtonExecutor.Location = new System.Drawing.Point(95, 13);
+            this.radioButtonExecutor.Name = "radioButtonExecutor";
+            this.radioButtonExecutor.Size = new System.Drawing.Size(83, 16);
+            this.radioButtonExecutor.TabIndex = 17;
+            this.radioButtonExecutor.TabStop = true;
+            this.radioButtonExecutor.Text = "任务执行者";
+            this.radioButtonExecutor.UseVisualStyleBackColor = true;
+            this.radioButtonExecutor.CheckedChanged += new System.EventHandler(this.radioButtonExecutor_CheckedChanged);
             // 
             // FormMain
             // 
@@ -225,7 +252,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 602);
-            this.Controls.Add(this.checkBoxType);
+            this.Controls.Add(this.groupBoxUser);
             this.Controls.Add(this.groupBoxComp);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonCurr);
@@ -244,6 +271,8 @@
             this.dropPanel.PerformLayout();
             this.groupBoxComp.ResumeLayout(false);
             this.groupBoxComp.PerformLayout();
+            this.groupBoxUser.ResumeLayout(false);
+            this.groupBoxUser.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,7 +295,9 @@
         private System.Windows.Forms.GroupBox groupBoxComp;
         private System.Windows.Forms.RadioButton radioButtonCompAll;
         private System.Windows.Forms.RadioButton radioButtonNotComp;
-        private System.Windows.Forms.CheckBox checkBoxType;
+        private System.Windows.Forms.GroupBox groupBoxUser;
+        private System.Windows.Forms.RadioButton radioButtonExecutor;
+        private System.Windows.Forms.RadioButton radioButtonCreator;
     }
 }
 

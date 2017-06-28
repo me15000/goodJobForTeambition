@@ -164,7 +164,7 @@ namespace goodJob
         void ProcessDataList(List<DataEntities.TBEntity> datalist)
         {
 
-            if (checkBoxType.Checked)
+            if (radioButtonCreator.Checked)
             {
                 ProcessDataListByCreator(datalist);
             }
@@ -628,7 +628,15 @@ namespace goodJob
 
         }
 
-        private void checkBoxType_CheckedChanged(object sender, EventArgs e)
+ 
+
+        private void radioButtonCreator_CheckedChanged(object sender, EventArgs e)
+        {
+            ProcessDataList(DataListData);
+
+        }
+
+        private void radioButtonExecutor_CheckedChanged(object sender, EventArgs e)
         {
             ProcessDataList(DataListData);
 
